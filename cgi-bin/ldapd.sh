@@ -18,7 +18,7 @@ password=$(echo ${normalized}| awk -v FS='password=' '{print $2}')
 
 sleep 1s
 
-ldapsearch -x -D "uid=$username,ou=Staff,ou=Users,dc=ops,dc=incuda,dc=com" -h 192.168.1.85 -w  $password  > /dev/null
+ldapsearch -x -D "uid=$username,ou=xxx,ou=xxx,dc=xxx,dc=xxx,dc=xxx" -h 192.168.1.x -w  $password  > /dev/null
 EXITCODE=$?
 
 if [[ ${EXITCODE} -eq 0 ]]; then
