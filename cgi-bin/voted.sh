@@ -17,7 +17,7 @@ mkdir /tmp/votef
 # parse POSTed image name
 imageVoted=$(echo ${query}| awk -v FS='imagevoted=' '{print $2}')
 
-if [ ! -z $cookieUsername ]; then
+if [ ! -z "$cookieUsername"  ]; then
   echo "$imageVoted" > /tmp/votef/$cookieUsername.voted
 fi
 
