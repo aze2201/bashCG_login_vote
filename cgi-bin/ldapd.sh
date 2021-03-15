@@ -24,7 +24,7 @@ EXITCODE=$?
 if [[ ${EXITCODE} -eq 0 ]]; then
 	echo "$(date +%Y%m%d%H%M)|$username" > /tmp/$username.login
     echo "<script>setCookie(\"username\", \"$username\", 30);</script>"
-	echo "<META HTTP-EQUIV=Refresh CONTENT=\"1; URL=http://192.168.1.195:8000/cgi-bin/list.sh\">"
+	echo "<META HTTP-EQUIV=Refresh CONTENT=\"1; URL=http://192.168.1.x:8000/cgi-bin/list.sh\">"
 	#env
 	#echo ${HTTP_COOKIE[@]}
 else
