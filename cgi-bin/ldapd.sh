@@ -23,8 +23,9 @@ ldapsearch -x -D "uid=$username,ou=xxx,ou=xxx,dc=xxx,dc=xxx,dc=xxx" -h 192.168.1
 EXITCODE=$?
 
 if [[ ${EXITCODE} -eq 0 ]]; then
-	echo "$(date +%Y%m%d%H%M)|$username" > /tmp/$username.login
+        # set Cookie
         echo "<script>setCookie(\"username\", \"$username\", 30);</script>"
+	# reload to new PAGE auto
 	echo "<META HTTP-EQUIV=Refresh CONTENT=\"1; URL=http://192.168.1.x:8000/cgi-bin/list.sh\">"
 	#env
 	#echo ${HTTP_COOKIE[@]}
